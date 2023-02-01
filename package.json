@@ -18,11 +18,7 @@
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn",
     "prepack": "bob build",
-    "docs": "ts-node ./documentation/buildDocs.ts",
-    "prepare": "bob build"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "docs": "ts-node ./documentation/buildDocs.ts"
   },
   "keywords": [
     "react-native-component",
@@ -79,12 +75,6 @@
     "react-native-pager-view": "*",
     "react-native-reanimated": "next"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
-    }
-  },
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
@@ -109,7 +99,6 @@
   "dependencies": {
     "use-deep-compare": "^1.1.0"
   },
-  "packageManager": "yarn@1.22.11",
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
